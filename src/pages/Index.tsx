@@ -95,37 +95,37 @@ const Index = () => {
               icon={Target}
               title="Analyse approfondie"
               description="Chaque signal est le fruit d'une analyse méthodique des matchs de tennis de table. Pas de hasard, que de la stratégie."
-              variant="gold"
+              variant="blue"
             />
             <FeatureCard
               icon={Lock}
               title="Money Management strict"
               description="10% du capital par position. Une règle d'or pour protéger votre capital et assurer une croissance contrôlée."
-              variant="green"
+              variant="purple"
             />
             <FeatureCard
               icon={BarChart3}
               title="Transparence totale"
               description="Toutes les performances sont traçables sur le dashboard. Historique complet, statistiques détaillées."
-              variant="gold"
+              variant="cyan"
             />
             <FeatureCard
               icon={Send}
               title="Signaux Telegram"
               description="Recevez les signaux directement sur Telegram. Réactif, précis, et accessible où que vous soyez."
-              variant="green"
+              variant="blue"
             />
             <FeatureCard
               icon={Zap}
               title="Réactivité"
               description="Signaux envoyés en temps réel pour vous permettre de prendre position au meilleur moment."
-              variant="gold"
+              variant="purple"
             />
             <FeatureCard
               icon={Users}
               title="Communauté disciplinée"
               description="Rejoignez une communauté d'utilisateurs sérieux, focalisés sur la performance long terme."
-              variant="green"
+              variant="cyan"
             />
           </div>
         </div>
