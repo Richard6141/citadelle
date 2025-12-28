@@ -4,20 +4,22 @@ interface FeatureCardProps {
   icon: LucideIcon;
   title: string;
   description: string;
-  variant?: "default" | "gold" | "green";
+  variant?: "default" | "blue" | "purple" | "cyan";
 }
 
 const FeatureCard = ({ icon: Icon, title, description, variant = "default" }: FeatureCardProps) => {
   const variantStyles = {
     default: "bg-card border-border hover:border-muted-foreground/30",
-    gold: "bg-card border-primary/20 hover:border-primary/40",
-    green: "bg-card border-secondary/20 hover:border-secondary/40",
+    blue: "bg-card border-primary/20 hover:border-primary/40 hover:shadow-glow",
+    purple: "bg-card border-secondary/20 hover:border-secondary/40 hover:shadow-glow-purple",
+    cyan: "bg-card border-accent/20 hover:border-accent/40 hover:shadow-glow-cyan",
   };
 
   const iconStyles = {
     default: "bg-muted text-foreground",
-    gold: "bg-primary/10 text-primary",
-    green: "bg-secondary/10 text-secondary",
+    blue: "bg-primary/10 text-primary",
+    purple: "bg-secondary/10 text-secondary",
+    cyan: "bg-accent/10 text-accent",
   };
 
   return (

@@ -1,4 +1,4 @@
-import { Check, Lock, Crown } from "lucide-react";
+import { Check, Lock, Crown, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface PricingCardProps {
@@ -24,15 +24,15 @@ const PricingCard = ({
     <div
       className={`relative p-8 rounded-2xl border transition-all duration-300 ${
         isPro
-          ? "bg-gradient-to-b from-primary/5 to-card border-primary/30 shadow-glow"
-          : "bg-card border-border hover:border-muted-foreground/30"
+          ? "bg-gradient-to-b from-secondary/10 via-primary/5 to-card border-primary/30 shadow-glow"
+          : "bg-card border-border hover:border-primary/30"
       }`}
     >
       {/* Pro Badge */}
       {isPro && (
         <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-          <span className="inline-flex items-center gap-1 px-3 py-1 bg-primary text-primary-foreground text-xs font-semibold rounded-full">
-            <Crown className="w-3 h-3" />
+          <span className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-gradient-primary text-primary-foreground text-xs font-semibold rounded-full shadow-glow">
+            <Sparkles className="w-3.5 h-3.5" />
             RECOMMANDÉ
           </span>
         </div>
@@ -40,10 +40,10 @@ const PricingCard = ({
 
       {/* Icon */}
       <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${
-        isPro ? "bg-primary/20" : "bg-muted"
+        isPro ? "bg-gradient-primary shadow-glow" : "bg-muted"
       }`}>
         {isPro ? (
-          <Crown className="w-7 h-7 text-primary" />
+          <Crown className="w-7 h-7 text-primary-foreground" />
         ) : (
           <Lock className="w-7 h-7 text-muted-foreground" />
         )}
@@ -55,7 +55,7 @@ const PricingCard = ({
 
       {/* Price */}
       <div className="mb-8">
-        <span className="font-serif text-4xl font-bold text-foreground">{price}</span>
+        <span className={`font-serif text-4xl font-bold ${isPro ? "text-primary" : "text-foreground"}`}>{price}</span>
         <span className="text-muted-foreground text-sm ml-2">/ licence</span>
       </div>
 
@@ -63,7 +63,7 @@ const PricingCard = ({
       <ul className="space-y-3 mb-8">
         {features.map((feature, index) => (
           <li key={index} className="flex items-start gap-3">
-            <Check className={`w-5 h-5 flex-shrink-0 mt-0.5 ${isPro ? "text-primary" : "text-secondary"}`} />
+            <Check className={`w-5 h-5 flex-shrink-0 mt-0.5 ${isPro ? "text-primary" : "text-accent"}`} />
             <span className="text-sm text-muted-foreground">{feature}</span>
           </li>
         ))}
