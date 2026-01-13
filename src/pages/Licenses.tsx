@@ -30,33 +30,48 @@ const Licenses = () => {
       {/* Pricing */}
       <section className="py-20 md:py-28">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             <PricingCard
-              name="Citadelle"
-              price="$500"
-              description="L'accès essentiel pour commencer avec une approche disciplinée des paris sportifs."
+              name="Découverte"
+              price="$99"
+              duration="3 jours"
+              description="Idéal pour tester la méthode Citadelle et découvrir notre approche."
               features={[
                 "Accès au canal Telegram privé",
-                "Signaux tennis de table analysés",
+                "Signaux tennis de table",
                 "Accès au dashboard de suivi",
-                "Historique des performances",
                 "Support par email",
               ]}
               ctaHref="https://t.me/citadelle"
             />
             <PricingCard
-              name="Citadelle Pro"
-              price="$1000"
-              description="Pour ceux qui veulent maximiser leur potentiel avec des outils avancés."
+              name="Standard"
+              price="$499"
+              duration="14 jours"
+              description="L'accès complet pour progresser avec une approche disciplinée."
               features={[
-                "Tout inclus dans la licence Citadelle",
-                "Accès prioritaire aux signaux",
-                "Analyses détaillées par match",
-                "Suivi de performance avancé",
-                "Projections personnalisées",
-                "Support prioritaire 24/7",
+                "Accès au canal Telegram privé",
+                "Signaux tennis de table analysés",
+                "Accès au dashboard de suivi",
+                "Historique des performances",
+                "Support réactif",
               ]}
               isPro
+              ctaHref="https://t.me/citadelle"
+            />
+            <PricingCard
+              name="Classique"
+              price="$799"
+              duration="30 jours"
+              description="L'expérience complète pour les utilisateurs engagés sur le long terme."
+              features={[
+                "Accès au canal Telegram privé",
+                "Signaux tennis de table analysés",
+                "Accès au dashboard avancé",
+                "Historique complet des performances",
+                "Analyses détaillées par match",
+                "Support prioritaire 24/7",
+              ]}
               ctaHref="https://t.me/citadelle"
             />
           </div>
@@ -121,7 +136,7 @@ const Licenses = () => {
           <div className="max-w-2xl mx-auto">
             <div className="space-y-6">
               {[
-                { step: "1", title: "Choisissez votre licence", description: "Sélectionnez Citadelle ($500) ou Citadelle Pro ($1000)." },
+                { step: "1", title: "Choisissez votre licence", description: "Découverte ($99 / 3 jours), Standard ($499 / 14 jours) ou Classique ($799 / 30 jours)." },
                 { step: "2", title: "Contactez-nous sur Telegram", description: "Cliquez sur le bouton pour nous contacter et finaliser votre inscription." },
                 { step: "3", title: "Effectuez le paiement", description: "Réglez votre licence de manière sécurisée." },
                 { step: "4", title: "Recevez votre accès", description: "Accédez immédiatement au canal privé et au dashboard." },

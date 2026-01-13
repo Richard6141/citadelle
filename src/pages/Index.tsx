@@ -242,30 +242,43 @@ const Index = () => {
             subtitle="Choisissez l'accès qui correspond à vos objectifs."
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             <PricingCard
-              name="Citadelle"
-              price="$500"
-              description="L'accès essentiel pour commencer avec discipline."
+              name="Découverte"
+              price="$99"
+              duration="3 jours"
+              description="Idéal pour tester la méthode Citadelle."
               features={[
                 "Accès au canal Telegram privé",
                 "Signaux tennis de table",
-                "Accès au dashboard de suivi",
-                "Support standard",
+                "Accès au dashboard",
               ]}
             />
             <PricingCard
-              name="Citadelle Pro"
-              price="$1000"
-              description="Pour ceux qui veulent aller plus loin."
+              name="Standard"
+              price="$499"
+              duration="14 jours"
+              description="L'accès complet pour progresser avec discipline."
               features={[
-                "Tout inclus dans Citadelle",
-                "Accès prioritaire aux signaux",
-                "Analyses avancées",
-                "Suivi de performance avancé",
-                "Support prioritaire",
+                "Accès au canal Telegram privé",
+                "Signaux tennis de table analysés",
+                "Accès au dashboard de suivi",
+                "Support réactif",
               ]}
               isPro
+            />
+            <PricingCard
+              name="Classique"
+              price="$799"
+              duration="30 jours"
+              description="L'expérience complète pour les plus engagés."
+              features={[
+                "Accès au canal Telegram privé",
+                "Signaux tennis de table analysés",
+                "Accès au dashboard avancé",
+                "Historique des performances",
+                "Support prioritaire",
+              ]}
             />
           </div>
 
