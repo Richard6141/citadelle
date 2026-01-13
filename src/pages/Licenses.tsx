@@ -32,46 +32,43 @@ const Licenses = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             <PricingCard
-              name="Découverte"
-              price="$99"
+              title="Découverte"
+              price={99}
               duration="3 jours"
-              description="Idéal pour tester la méthode Citadelle et découvrir notre approche."
               features={[
-                "Accès au canal Telegram privé",
+                "Accès au canal Telegram",
                 "Signaux tennis de table",
-                "Accès au dashboard de suivi",
-                "Support par email",
-              ]}
-              ctaHref="https://t.me/citadelle"
-            />
-            <PricingCard
-              name="Standard"
-              price="$499"
-              duration="14 jours"
-              description="L'accès complet pour progresser avec une approche disciplinée."
-              features={[
-                "Accès au canal Telegram privé",
-                "Signaux tennis de table analysés",
-                "Accès au dashboard de suivi",
-                "Historique des performances",
+                "Accès au dashboard",
                 "Support réactif",
               ]}
-              isPro
+              ctaText="Commencer"
               ctaHref="https://t.me/citadelle"
             />
             <PricingCard
-              name="Classique"
-              price="$799"
-              duration="30 jours"
-              description="L'expérience complète pour les utilisateurs engagés sur le long terme."
+              title="Standard"
+              price={499}
+              duration="14 jours"
               features={[
-                "Accès au canal Telegram privé",
-                "Signaux tennis de table analysés",
-                "Accès au dashboard avancé",
-                "Historique complet des performances",
-                "Analyses détaillées par match",
-                "Support prioritaire 24/7",
+                "Accès au canal Telegram",
+                "Signaux tennis de table",
+                "Accès au dashboard",
+                "Support réactif",
               ]}
+              popular
+              ctaText="Choisir Standard"
+              ctaHref="https://t.me/citadelle"
+            />
+            <PricingCard
+              title="Classique"
+              price={799}
+              duration="30 jours"
+              features={[
+                "Accès au canal Telegram",
+                "Signaux tennis de table",
+                "Accès au dashboard",
+                "Support réactif",
+              ]}
+              ctaText="Choisir Classique"
               ctaHref="https://t.me/citadelle"
             />
           </div>
