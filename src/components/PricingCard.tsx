@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 interface PricingCardProps {
   name: string;
   price: string;
+  duration?: string;
   description: string;
   features: string[];
   isPro?: boolean;
@@ -14,6 +15,7 @@ interface PricingCardProps {
 const PricingCard = ({
   name,
   price,
+  duration,
   description,
   features,
   isPro = false,
@@ -56,7 +58,9 @@ const PricingCard = ({
       {/* Price */}
       <div className="mb-8">
         <span className={`font-serif text-4xl font-bold ${isPro ? "text-primary" : "text-foreground"}`}>{price}</span>
-        <span className="text-muted-foreground text-sm ml-2">/ licence</span>
+        {duration && (
+          <span className="text-muted-foreground text-sm ml-2">/ {duration}</span>
+        )}
       </div>
 
       {/* Features */}
