@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls:*)",
+      "Bash(dir /b \"D:\\\\PROJETS\\\\DIGITAL DEVELOPEMENT\\\\citadelle\\\\*.docx\")",
+      "Bash(for:*)",
+      "Bash(do echo \"=== $f ===\")",
+      "Bash(unzip:*)",
+      "Bash(done)",
+      "Bash(python3:*)",
+      "Bash(node -e:*)",
+      "Bash(perl -pe:*)",
+      "WebFetch(domain:documenter.getpostman.com)",
+      "WebSearch",
+      "WebFetch(domain:nowpayments.io)",
+      "WebFetch(domain:github.com)"
+    ]
+  }
+}

@@ -42,7 +42,7 @@ const Licenses = () => {
                 "Support réactif",
               ]}
               ctaText="Commencer"
-              ctaHref="https://t.me/citadelle"
+              ctaHref="/checkout?license=decouverte"
             />
             <PricingCard
               title="Standard"
@@ -56,7 +56,7 @@ const Licenses = () => {
               ]}
               popular
               ctaText="Choisir Standard"
-              ctaHref="https://t.me/citadelle"
+              ctaHref="/checkout?license=standard"
             />
             <PricingCard
               title="Classique"
@@ -69,7 +69,7 @@ const Licenses = () => {
                 "Support réactif",
               ]}
               ctaText="Choisir Classique"
-              ctaHref="https://t.me/citadelle"
+              ctaHref="/checkout?license=classique"
             />
           </div>
         </div>
@@ -134,9 +134,9 @@ const Licenses = () => {
             <div className="space-y-6">
               {[
                 { step: "1", title: "Choisissez votre licence", description: "Découverte ($99 / 3 jours), Standard ($499 / 14 jours) ou Classique ($799 / 30 jours)." },
-                { step: "2", title: "Contactez-nous sur Telegram", description: "Cliquez sur le bouton pour nous contacter et finaliser votre inscription." },
-                { step: "3", title: "Effectuez le paiement", description: "Réglez votre licence de manière sécurisée." },
-                { step: "4", title: "Recevez votre accès", description: "Accédez immédiatement au canal privé et au dashboard." },
+                { step: "2", title: "Remplissez vos informations", description: "Email et nom d'utilisateur Telegram pour recevoir votre accès." },
+                { step: "3", title: "Payez en crypto", description: "Bitcoin, Ethereum, USDT et 100+ cryptomonnaies acceptées via NOWPayments." },
+                { step: "4", title: "Recevez votre accès", description: "Accédez immédiatement au canal privé Telegram après confirmation du paiement." },
               ].map((item, index) => (
                 <div key={index} className="flex gap-4">
                   <div className="w-10 h-10 rounded-full bg-primary/10 border-2 border-primary flex items-center justify-center font-serif font-semibold text-primary flex-shrink-0">
@@ -151,12 +151,12 @@ const Licenses = () => {
             </div>
 
             <div className="mt-12 text-center">
-              <a href="https://t.me/citadelle" target="_blank" rel="noopener noreferrer">
+              <Link to="/checkout?license=standard">
                 <Button size="lg" className="font-semibold">
-                  <Send className="w-5 h-5 mr-2" />
-                  Nous contacter sur Telegram
+                  <ArrowRight className="w-5 h-5 mr-2" />
+                  Commencer maintenant
                 </Button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

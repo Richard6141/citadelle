@@ -58,7 +58,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/mentions-legales"
+                  to="/cgu"
                   className="text-muted-foreground text-sm hover:text-primary transition-colors"
                 >
                   Conditions d'utilisation
@@ -66,10 +66,18 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/mentions-legales"
+                  to="/cgv"
                   className="text-muted-foreground text-sm hover:text-primary transition-colors"
                 >
-                  Politique de confidentialité
+                  Conditions de vente
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/disclaimer"
+                  className="text-muted-foreground text-sm hover:text-primary transition-colors"
+                >
+                  Disclaimer
                 </Link>
               </li>
             </ul>

@@ -1,4 +1,5 @@
 import { Check, Clock, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 interface PricingCardProps {
@@ -9,6 +10,7 @@ interface PricingCardProps {
   popular?: boolean;
   ctaText?: string;
   ctaHref?: string;
+  isExternal?: boolean;
 }
 
 const PricingCard = ({
@@ -19,6 +21,7 @@ const PricingCard = ({
   popular = false,
   ctaText = "Choisir cette licence",
   ctaHref = "#",
+  isExternal = false,
 }: PricingCardProps) => {
   return (
     <div
@@ -71,14 +74,25 @@ const PricingCard = ({
       </ul>
 
       {/* CTA */}
-      <a href={ctaHref} target="_blank" rel="noopener noreferrer">
-        <Button
-          variant={popular ? "default" : "outline"}
-          className={`w-full font-semibold ${popular ? "animate-glow-pulse" : ""}`}
-        >
-          {ctaText}
-        </Button>
-      </a>
+      {isExternal ? (
+        <a href={ctaHref} target="_blank" rel="noopener noreferrer">
+          <Button
+            variant={popular ? "default" : "outline"}
+            className={`w-full font-semibold ${popular ? "animate-glow-pulse" : ""}`}
+          >
+            {ctaText}
+          </Button>
+        </a>
+      ) : (
+        <Link to={ctaHref}>
+          <Button
+            variant={popular ? "default" : "outline"}
+            className={`w-full font-semibold ${popular ? "animate-glow-pulse" : ""}`}
+          >
+            {ctaText}
+          </Button>
+        </Link>
+      )}
     </div>
   );
 };
