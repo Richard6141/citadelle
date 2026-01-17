@@ -14,7 +14,8 @@
       "WebSearch",
       "WebFetch(domain:nowpayments.io)",
       "WebFetch(domain:github.com)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd Render deployment configuration\n\n- Add render.yaml for automatic deployment\n- Update server for production \\(CORS, env vars\\)\n- Support FRONTEND_URL for production CORS\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
     ]
   }
 }
