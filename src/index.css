@@ -7,88 +7,88 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Citadelle Design System - Premium Dark Theme with Blue/Purple Accents */
+/* Citadelle Design System - Light Theme with Blue/Purple Accents */
 
 @layer base {
   :root {
-    /* Dark theme as default */
-    --background: 225 25% 6%;
-    --foreground: 210 40% 98%;
+    /* Light theme */
+    --background: 0 0% 100%;
+    --foreground: 220 15% 10%;
 
-    --card: 225 25% 10%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 20% 97%;
+    --card-foreground: 220 15% 10%;
 
-    --popover: 225 25% 12%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 10%;
 
     /* Primary: Vibrant Blue */
-    --primary: 230 85% 60%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 230 85% 50%;
+    --primary-foreground: 0 0% 100%;
 
     /* Secondary: Rich Purple */
-    --secondary: 270 70% 55%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 270 70% 45%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 225 20% 25%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 220 15% 94%;
+    --muted-foreground: 220 10% 35%;
 
     /* Accent: Cyan/Teal */
-    --accent: 195 85% 50%;
-    --accent-foreground: 225 25% 6%;
+    --accent: 195 85% 45%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 72% 50%;
-    --destructive-foreground: 0 85% 97%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 225 20% 18%;
-    --input: 225 20% 18%;
-    --ring: 230 85% 60%;
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 230 85% 55%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 225 25% 8%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 230 85% 60%;
-    --sidebar-primary-foreground: 210 40% 98%;
-    --sidebar-accent: 270 70% 55%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 225 20% 18%;
-    --sidebar-ring: 230 85% 60%;
+    --sidebar-background: 220 20% 96%;
+    --sidebar-foreground: 225 25% 15%;
+    --sidebar-primary: 230 85% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 270 70% 50%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 220 15% 88%;
+    --sidebar-ring: 230 85% 55%;
 
     /* Chart colors - Blue/Purple spectrum */
-    --chart-1: 230 85% 65%;
-    --chart-2: 260 80% 65%;
-    --chart-3: 195 85% 50%;
-    --chart-4: 290 75% 60%;
-    --chart-5: 180 70% 45%;
+    --chart-1: 230 85% 55%;
+    --chart-2: 260 80% 55%;
+    --chart-3: 195 85% 45%;
+    --chart-4: 290 75% 55%;
+    --chart-5: 180 70% 40%;
 
-    --success: 160 70% 45%;
-    --success-foreground: 210 40% 98%;
+    --success: 160 70% 40%;
+    --success-foreground: 0 0% 100%;
 
     --font-sans: 'Lato', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
     --font-serif: 'EB Garamond', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
     --font-mono: 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 
-    --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.3), 0 1px 2px -1px hsl(0 0% 0% / 0.3);
-    --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.3), 0 1px 2px -1px hsl(0 0% 0% / 0.3);
-    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -2px hsl(0 0% 0% / 0.3);
-    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.3), 0 4px 6px -4px hsl(0 0% 0% / 0.3);
-    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.3), 0 8px 10px -6px hsl(0 0% 0% / 0.3);
-    --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.15);
-    --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.2);
-    --shadow-2xl: 0 25px 50px -12px hsl(0 0% 0% / 0.5);
+    --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.08), 0 1px 2px -1px hsl(0 0% 0% / 0.08);
+    --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -2px hsl(0 0% 0% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.1), 0 4px 6px -4px hsl(0 0% 0% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.1), 0 8px 10px -6px hsl(0 0% 0% / 0.1);
+    --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+    --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.08);
+    --shadow-2xl: 0 25px 50px -12px hsl(0 0% 0% / 0.15);
 
     /* Glows using primary/accent colors */
-    --shadow-glow: 0 0 30px hsl(230 85% 60% / 0.25);
-    --shadow-glow-purple: 0 0 30px hsl(270 70% 55% / 0.25);
-    --shadow-glow-cyan: 0 0 30px hsl(195 85% 50% / 0.25);
+    --shadow-glow: 0 0 30px hsl(230 85% 55% / 0.15);
+    --shadow-glow-purple: 0 0 30px hsl(270 70% 50% / 0.15);
+    --shadow-glow-cyan: 0 0 30px hsl(195 85% 45% / 0.15);
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(230 85% 60%) 0%, hsl(270 70% 55%) 100%);
-    --gradient-dark: linear-gradient(180deg, hsl(225 25% 8%) 0%, hsl(225 25% 4%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(225 25% 12%) 0%, hsl(225 25% 8%) 100%);
-    --gradient-glow: linear-gradient(135deg, hsl(230 85% 60% / 0.1) 0%, hsl(270 70% 55% / 0.1) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(230 85% 55%) 0%, hsl(270 70% 50%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(220 20% 96%) 0%, hsl(220 20% 98%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(220 20% 97%) 100%);
+    --gradient-glow: linear-gradient(135deg, hsl(230 85% 55% / 0.05) 0%, hsl(270 70% 50% / 0.05) 100%);
 
-    --sidebar: 225 25% 10%;
+    --sidebar: 220 20% 96%;
     --tracking-normal: 0em;
     --spacing: 0.25rem;
   }
