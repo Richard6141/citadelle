@@ -54,7 +54,7 @@ class NowPaymentsService {
     return key;
   }
 
-  private async request<T>(endpoint: string, options: RequestInit = {}): Promise<T> {
+  private async request<T>(endpoint: string, options: any = {}): Promise<T> {
     const response = await fetch(`${NOWPAYMENTS_API_URL}${endpoint}`, {
       ...options,
       headers: {
@@ -65,11 +65,11 @@ class NowPaymentsService {
     });
 
     if (!response.ok) {
-      const error = await response.json().catch(() => ({ message: 'Unknown error' }));
+      const error: any = await response.json().catch(() => ({ message: 'Unknown error' }));
       throw new Error(error.message || `API error: ${response.status}`);
     }
 
-    return response.json();
+    return response.json() as Promise<T>;
   }
 
   async getStatus(): Promise<{ message: string }> {

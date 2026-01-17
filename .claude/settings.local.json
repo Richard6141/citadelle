@@ -17,7 +17,8 @@
       "Bash(git add:*)",
       "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd Render deployment configuration\n\n- Add render.yaml for automatic deployment\n- Update server for production \\(CORS, env vars\\)\n- Support FRONTEND_URL for production CORS\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
       "Bash(git commit -m \"$\\(cat <<''EOF''\nFix server build for Render deployment\n\n- Move TypeScript types to dependencies for production build\n- Update server tsconfig for less strict compilation\n- Fix types: node, express, cors\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(git commit:*)"
     ]
   }
 }
