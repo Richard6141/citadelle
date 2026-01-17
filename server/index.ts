@@ -3,22 +3,28 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import paymentRoutes from './routes/payment';
 
-// Charger .env depuis la racine du projet
-const envPath = process.cwd() + '/.env';
-console.log('Loading .env from:', envPath);
-const result = dotenv.config({ path: envPath });
-if (result.error) {
-  console.error('Error loading .env:', result.error);
-} else {
-  console.log('API Key loaded:', process.env.NOWPAYMENTS_API_KEY ? 'Yes' : 'No');
+// Charger .env (en dev seulement, Render utilise les env vars directement)
+if (process.env.NODE_ENV !== 'production') {
+  const envPath = process.cwd() + '/.env';
+  console.log('Loading .env from:', envPath);
+  dotenv.config({ path: envPath });
 }
+console.log('API Key loaded:', process.env.NOWPAYMENTS_API_KEY ? 'Yes' : 'No');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Middleware
+// CORS - autoriser le frontend (dev + production)
+const allowedOrigins = [
+  'http://localhost:5173',
+  'http://localhost:8080',
+  'http://127.0.0.1:5173',
+  'http://127.0.0.1:8080',
+  process.env.FRONTEND_URL
+].filter(Boolean);
+
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://localhost:8080', 'http://127.0.0.1:5173', 'http://127.0.0.1:8080'],
+  origin: allowedOrigins,
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']

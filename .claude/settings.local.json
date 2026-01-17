@@ -13,7 +13,8 @@
       "WebFetch(domain:documenter.getpostman.com)",
       "WebSearch",
       "WebFetch(domain:nowpayments.io)",
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "Bash(git add:*)"
     ]
   }
 }
