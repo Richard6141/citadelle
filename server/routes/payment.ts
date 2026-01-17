@@ -1,5 +1,5 @@
 import { Router, Request, Response } from 'express';
-import { nowPaymentsService } from '../services/nowpayments';
+import { nowPaymentsService } from '../services/nowpayments.js';
 import crypto from 'crypto';
 
 const router = Router();
